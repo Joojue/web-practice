@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>비만도 판정</title>
+	<style>
+	span1 {color : blue; font-size : 30px;}
+	span2 {color : black; font-size : 30px;}
+	span3 {color : orange; font-size : 30px;}
+	span4 {color : red; font-size : 30px;}
+	</style>
+</head>
+<body>
+<table border="1">
+<script type = "text/javascript">
+
+name = prompt("이름을 입력하세요.");
+height = prompt(name + "님의 키를 입력하세요.");
+weight = prompt(name + "님의 몸무게를 입력하세요.");
+bmi = (weight/((height/100)*(height/100))).toFixed(1);
+
+function bmi_cal() {
+	var w = weight;
+	var h = height/100;
+	var bmi = (w/(h^2));
+	if (bmi >= 30)
+	f = "<span4>비만</span4>";
+	if (25 <= bmi, bmi < 30)
+	f = "<span3>과체중</span3>";
+	if (18.5 <= bmi, bmi < 25)
+	f = "<span2>정상</span2>";
+	if (18.5 > bmi)
+	f = "<span1>저체중<span1>";
+	return f;
+	};
+
+var cell = new Object();
+cell.name = "이름"
+cell.height = "키"
+cell.weight = "몸무게"
+cell.bmi = "BMI"
+cell.fat = "비만도"
+
+var person = new Object();
+person.name = name
+person.height = height + "cm";
+person.weight = weight + "kg";
+person.bmi = bmi;
+person.fat = bmi_cal();
+
+
+for(var p in person, cell) {
+	document.write("<tr><th>" + cell[p] + "</th>");
+	document.write("<td>" + person[p] + "</td></tr>");
+	}
+</script>
+</body>
+</html>

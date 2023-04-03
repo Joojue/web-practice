@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>컬러 테이블</title>
+	<meta charset="utf-8">
+<style>
+	table { width: 300px;
+		height: 150px;
+		}
+	td { text-align: center;
+		font-size: 15px;
+		}
+</style>
+</head>
+	<body>
+	<table border="1", id="colortable">
+	<script type="text/javascript">
+	document.write("<tr id='0'>");
+	document.write("<tr id='1'>");
+	document.write("<td id='1'>1-1</td>");
+	document.write("<td id='2'>1-2</td>");
+	document.write("<td id='3'>1-3</td>");
+	document.write("<td id='4'>1-4</td>");
+	document.write("<td id='5'>1-5</td>");
+	document.write("</tr>");
+	document.write("<tr id='2'>");
+	document.write("<td id='1'>2-1</td>");
+	document.write("<td id='2'>2-2</td>");
+	document.write("<td id='3'>2-3</td>");
+	document.write("<td id='4'>2-4</td>");
+	document.write("<td id='5'>2-5</td>");
+	document.write("</tr>");
+	document.write("<tr id='3'>");
+	document.write("<td id='1'>3-1</td>");
+	document.write("<td id='2'>3-2</td>");
+	document.write("<td id='3'>3-3</td>");
+	document.write("<td id='4'>3-4</td>");
+	document.write("<td id='5'>3-5</td>");
+	document.write("</tr>");
+	document.write("</tr>");
+	
+	function colorChan(color) {
+		var a = parseInt(document.getElementById("h").value);
+		var b = parseInt(document.getElementById("w").value);
+		var c = document.getElementById("c").value;
+		var trc = document.getElementById("colortable").getElementsByTagName("tr");
+		var tdc = document.getElementById("colortable").getElementsByTagName("td");
+		if(a==1) {
+		tdc[b-1].style.backgroundColor=c;
+		} else if(a==2) {
+		tdc[b+4].style.backgroundColor=c;
+		} else {
+		tdc[b+9].style.backgroundColor=c;
+		}
+		}
+	</script>
+	</table>
+	<br>
+	<form>
+	<label>
+	세로
+	<input id="h" type="text" size="5" /></label><br>
+	<label>
+	가로
+	<input id="w" type="text" size="5" /></label><br>
+	<label>
+	컬러
+	<input id="c" type="text" size="25" /></label><br><br>
+	<label>
+	<input type="button" value="컬러&nbsp적용" onclick="colorChan(this.value);" /></label>
+	</form>
+	</body>
+</html>

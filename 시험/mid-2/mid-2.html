@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>중간고사2</title>
+<style>
+fieldset { width : 220px;}
+
+input[type=time] { 
+	width : 220px;
+	height : 35px;
+	text-align:center;
+	font-size:25px;
+	background : aqua;
+	color : red;
+	}
+legend { font-size : 25px;}
+
+span { display : inline-block;}
+
+input[type=time]:hover{
+        background : yellow;}
+
+input[type=checkbox]:hover{
+        transform : scale(2,2);}
+
+input[type=checkbox]:focus{
+	border-color : blue;}
+
+input[type=range]{
+        background : blue;}
+
+.a{ background: pink;}
+</style>
+</head>
+<body>
+<form>
+	<fieldset>
+	<legend><strong>알람&nbsp설정</strong></legend><br>
+	<input type="time" value="06:00"><br><br>
+	<label><span>
+	<input type="checkbox" value="1"><br>
+	일</span></label>
+	<label><span>
+	<input type="checkbox" value="2" checked><br>
+	월</span></label>
+	<label><span>
+	<input type="checkbox" value="3" checked><br>
+	화</span></label>
+	<label><span>
+	<input type="checkbox" value="4" checked><br>
+	수</span></label>
+	<label><span>
+	<input type="checkbox" value="5" checked><br>
+	목</span></label>
+	<label><span>
+	<input type="checkbox" value="6" checked><br>
+	금</span></label>
+	<label><span>
+	<input type="checkbox" value="7"><br>
+	토</span></label>
+	<br><br>
+	알람 사운드&nbsp
+	<select name="sound">
+		<option value="1" selected>Bell</option>
+		<option value="2">Ding Dong</option>
+		<option value="3">Beep</option>
+	</select>
+	<br><br>
+	<label>
+	음량 &nbsp0 <input type="range" min="0" max="15">15
+	</label>
+	<br><br>
+	</fieldset>
+	<br>
+	<button class="a" type="reset">초기화</button>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<input type="submit" value="등록">
+	<input type="button" value="취소">
+</form>
+</body>
+</html>

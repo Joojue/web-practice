@@ -1,0 +1,26 @@
+/* 김지우-스타일.css */
+
+div { background-color : ghostwhite;
+	background-size : 100px 100px;}
+
+body { background-image : url("media/meonjibeolrae.jpg");
+	background-repeat : repeat-x,y;}
+
+h3, h2 { font : italic bold 30px consolas, sans-serif;
+	color : Gold; }
+
+span { font-size : 1.5em;
+	color : red;}
+
+img { border : 15px groove blue;
+	box-shadow : 10px 10px 5px skyblue;}
+
+thead, .s0 {background : yellow;}
+.s1 { background : brown;}
+.s2 { background : blue;}
+.s3 { background : red;}
+.s4 { background : Grey;}
+.s5 { background : GreenYellow;}
+.s6 { background : HoneyDew;}
+.s7 { background : Indigo;}
+.s8 { background : IndianRed;}
